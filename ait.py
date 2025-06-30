@@ -87,7 +87,7 @@ def chat() -> None:
 
     while True:
         try:
-            user = input("[you] > ").strip()
+            user = input("[abhi] > ").strip()
         except KeyboardInterrupt:
             break
         if user.lower() in {"exit", "quit"}:
