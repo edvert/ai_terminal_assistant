@@ -1,34 +1,57 @@
-# 🧠 AI Terminal Assistant
+# AI Terminal Assistant
+* © 2025  
+* Written by: Abhi Singh (anodeus)  
+* Project: [AI Terminal](https://github.com/anodeus/ai-terminal)
 
-**AI Terminal** is a command-line AI utility developed by **Abhi Singh** (`@anodeus`).  
-It acts as a lightweight assistant powered by OpenAI and Google Gemini — bundled with system tools like process scanning, diagnostics, file search, and optional web search.
+<br/>
 
-## 🚀 Features
+## Description
+AI Terminal is an open-source command-line assistant designed for security researchers, ethical hackers, and developers. It combines the power of modern LLMs (OpenAI and Gemini) with practical system tools like file search, system diagnostics, process scanning, and web search — all in a terminal-first workflow.
 
-- ✨ Chat assistant using OpenAI or Gemini LLMs  
-- 📂 Recursive file finder  
-- 🔍 Web search via DuckDuckGo  
-- 🧪 System health monitor (CPU, memory, battery, disk)  
-- 🧠 Process scanner (with command-line inspection)  
-- 💡 Smart shell commands like `file find`, `ps scan`, `health`, etc.  
-- 👨‍💻 Fully offline-friendly (unless chat/web features are used)
+AI Terminal is developed as a personal project and learning tool by Abhi Singh. It aims to provide a flexible, scriptable interface for rapid automation and interaction with LLMs.
 
-## 📦 Installation
+DISCLAIMER: This is *only* for educational and research purposes. Do not use this for malicious or unauthorized activities.  
+Please refer to the LICENSE file for licensing details.
+
+#### Supported platforms:
+* Linux (Kali, Ubuntu, etc.)
+* macOS (with Python 3.8+ and `venv`)
+* WSL2 (Windows Subsystem for Linux)
+
+<br/>
+
+# Installation
+
+## Install via install.sh (Recommended)
 
 ```bash
 git clone https://github.com/anodeus/ai-terminal.git
 cd ai-terminal
 ./install.sh
 
-This script will:
+This script:
 
-    Create a virtual environment (aienv/)
+    Creates a virtual environment named aienv/
 
-    Install all dependencies from requirements.txt
+    Installs all dependencies from requirements.txt
 
-⚙️ Configuration: ~/.ait.yml
+<br/>
+Manual Setup
 
-Create a config file in your home directory to store your API keys:
+python3 -m venv aienv
+source aienv/bin/activate
+pip install -r requirements.txt
+
+To run the assistant:
+
+./ait.py chat
+
+<br/>
+Configuration
+
+Create a file in your home directory named .ait.yml:
+
+# ~/.ait.yml
 
 gemini_api_key: your-gemini-api-key
 gemini_model: gemini-1.5-flash
@@ -36,41 +59,36 @@ gemini_model: gemini-1.5-flash
 openai_api_key: your-openai-api-key
 openai_model: gpt-3.5-turbo
 
-    🛡️ Keep this file secret. Add .ait.yml to your .gitignore.
+    ⚠️ Warning: Keep this file secret. Do not upload it to GitHub.
 
-💬 Usage
+<br/>
+Basic Usage
 
-source aienv/bin/activate
-./ait.py chat
+./ait.py chat             # start chat assistant
+./ait.py health           # system diagnostics
+./ait.py ps               # process scanner
+./ait.py find notes.txt   # search files by name
+./ait.py search "best VPN for Kali Linux"
 
-Quick tools:
+<br/>
+AI Terminal Tools
 
-./ait.py health
-./ait.py ps
-./ait.py find password.txt
-./ait.py search "Kali Linux tips"
+    chat – OpenAI or Gemini-based assistant
 
-📁 Project Structure
+    health – CPU, battery, memory, and disk status
 
-ai-terminal/
-├── ait.py
-├── config.py
-├── modules/
-│   ├── diagnostics.py
-│   ├── file_search.py
-│   ├── process_scan.py
-│   └── web_search.py
-├── ascii/
-│   └── banner.txt
-├── install.sh
-├── requirements.txt
-├── README.md
-└── LICENSE
+    ps – List and inspect system processes
 
-📜 License
+    find – Search for files recursively
 
-MIT License
-© 2025 Abhi Singh (@anodeus)
+    search – DuckDuckGo-based quick search
 
+<br/>
+Bugs and Suggestions
 
-Let me know if you'd like this as a downloadable `README.md` file or also want `.ait.yml.example`
+Please open an issue on GitHub if you encounter bugs or have suggestions for improvement.
+<br/>
+License
+
+AI Terminal is released under the MIT License.
+See the LICENSE file for more detail.
