@@ -1,19 +1,43 @@
 
-    #!/usr/bin/env python3
-    """AI Terminal (ait.py)
-    Command‑line interface for AI‑powered utilities.
-    Created by Abhi Singh (anodeus)
-    """
+   #!/usr/bin/env python3
     from __future__ import annotations
+    """AI Terminal Assistant
+    
+    Now supports **Gemini** (Google Generative AI) as a free/cheap backend in
+    addition to OpenAI.
+    
+    Features:
+    - Process scanning (LLM‑aided)
+    - Project health check
+    - File search
+    - Chat assistant (`ait chat`) with either OpenAI **or** Gemini
+    - Basic system diagnostics (battery, CPU, memory)
+    - Optional web search integration
+    
+    Configuration (any of the following in **~/.ait.yml**):
+    ```yaml
+    # ---- choose ONE backend ----
+    # For OpenAI
+    openai_api_key: "sk-..."
+    openai_model: "gpt-4o-mini"
+    
+    # For Gemini (Google Generative AI)
+    gemini_api_key: "AIza..."
+    gemini_model: "gemini-1.5-flash"
+    ```
+    If both keys exist, **Gemini takes priority** (cheaper / free tier).
+    
+    Author: Abhi Singh
+    License: MIT
+    """
+    #from __future__ import annotations
     import argparse
     from typing import Dict, List
     from rich.console import Console
-
-    import diagnostics
-    import file_search
-    import web_search
-    import process_scan
+    
+    from modules import diagnostics, file_search, web_search, process_scan
     import config
+
 
     console = Console()
 
