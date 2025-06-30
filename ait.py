@@ -61,9 +61,9 @@ def print_banner() -> None:
        |______________________________________|
 
 [---]           AI Terminal Assistant: anodeus         [---]
-[---]           Created by: Abhi Singh (anodeus)        [---]
-[---]       Intelligence & Recon CLI Utility            [---]
-         Powered by OpenAI + Gemini Models
+[---]          Created by: Abhi Singh (anodeus)        [---]
+[---]          Intelligence & Recon CLI Utility        [---]
+               Powered by OpenAI + Gemini Models
 One interface. Many capabilities. Your command.
 
  github.com/anodeus | linuxbox.local | v1.0.0 '''
