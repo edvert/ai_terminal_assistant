@@ -34,11 +34,15 @@ $ ai compress all png files in the current directory
 # 🤖 Compress all PNG files in the current directory using tar and gzip.
 $ tar -czf png_files.tar.gz *.png
 
+
+
 PowerShell
 
 PS C:\Users\jdoe> ai how much free disk space in mb?
 # 🤖 Show free disk space for all drives in megabytes (MB).
 PS C:\Users\jdoe> Get-PSDrive -PSProvider FileSystem | Select-Object Name, @{Name="FreeSpaceMB"; Expression={$_.Free / 1MB -as [int]}}
+
+
 
 Contextual Usage with Pipes
 
@@ -50,6 +54,8 @@ $ ls | ai organize these files semantically
 # mkdir Pictures/Family Pictures/Vacation Pictures/Wedding
 # mkdir
 
+
+
 🛠️ Setup
 
 To get started with AI Terminal Assistant, follow these simple steps:
@@ -59,9 +65,13 @@ To get started with AI Terminal Assistant, follow these simple steps:
     git clone https://github.com/edvert/ai_terminal_assistant.git
     cd ai_terminal_assistant
 
+
+
     Install dependencies:
 
     pip install -r requirements.txt
+
+
 
     Set up your OpenAI API Key:
     You need an OpenAI API key to use this tool. Set it as an environment variable:
@@ -70,9 +80,13 @@ To get started with AI Terminal Assistant, follow these simple steps:
 
     export OPENAI_API_KEY="your_api_key_here"
 
+
+
     For PowerShell (Windows):
 
     $env:OPENAI_API_KEY = "your_api_key_here"
+
+
 
     Replace "your_api_key_here" with your actual OpenAI API key.
 
@@ -81,6 +95,8 @@ To get started with AI Terminal Assistant, follow these simple steps:
 To use the AI Terminal Assistant, simply type the ai command followed by your natural language instruction:
 
 $ ai list all files in the current directory
+
+
 
 The AI Terminal Assistant will generate a shell command based on your instruction and automatically type it into your terminal. You can then press Enter to execute it, edit it, or press Ctrl+C to cancel.
 ⚠️ Limitations
