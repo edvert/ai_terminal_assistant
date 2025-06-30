@@ -7,7 +7,7 @@ It acts as a lightweight assistant powered by OpenAI and Google Gemini — bundl
 
 
 
-## 🧰 Tech Stack
+## Tech Stack
 
 **Client / CLI:** Python 3.9+, [Rich](https://rich.readthedocs.io)
 
